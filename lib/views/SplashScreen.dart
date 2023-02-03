@@ -27,7 +27,7 @@ class _SplashScreenState extends State<SplashScreen> {
     return Scaffold(
       body: Container(
         width: _size.width,
-        height: _size.width,
+        height: _size.height,
         decoration: BoxDecoration(
             gradient: LinearGradient(
               begin: Alignment.topCenter,

@@ -2,6 +2,8 @@ import 'package:app2/views/Widgets/loginSection.dart';
 import 'package:app2/views/Widgets/navBar.dart';
 import 'package:flutter/material.dart';
 
+import 'Widgets/keyBoard.dart';
+
 class LoginScreen extends StatelessWidget {
   const LoginScreen({Key? key}) : super(key: key);
 
@@ -33,11 +35,16 @@ class LoginScreen extends StatelessWidget {
                 )),
             Positioned(right: 20, top: 16, child: NavBar()),
             Positioned(
-              top: 90,
+              top: 120,
               right: 80,
 
-              child:LoginSection()
-            )
+              child:LoginSection(),
+
+            ),
+            Positioned(
+              top: 150,
+                left: 120,
+                child: KeyBordSection())
           ],
         ),
       ),
