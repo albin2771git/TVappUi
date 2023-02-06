@@ -1,9 +1,14 @@
+
 import 'dart:async';
+
+import 'package:app2/PrincipalApp/PrincipalLogin.dart';
+import 'package:app2/PrincipalApp/login2.dart';
+import 'package:app2/PrincipalApp/widgets/welcomePri.dart';
 
 import 'package:flutter/material.dart';
 import 'package:lottie/lottie.dart';
 
-import 'loginScreen.dart';
+import '../views/loginScreen.dart';
 
 class SplashScreen extends StatefulWidget {
   const SplashScreen({Key? key}) : super(key: key);
@@ -16,8 +21,12 @@ class _SplashScreenState extends State<SplashScreen> {
   @override
   void initState() {
     // TODO: implement initState
-    Timer(Duration(milliseconds: 600),(){
-      Navigator.pushReplacement(context, MaterialPageRoute(builder: (context)=>LoginScreen()));
+    Timer(Duration(milliseconds: 3000),(){
+      Navigator.pushReplacement(context, MaterialPageRoute(builder: (context)=>
+         // PrincipalLogin()
+        Login2()
+
+      ));
     });
     super.initState();
   }
@@ -33,11 +42,11 @@ class _SplashScreenState extends State<SplashScreen> {
               begin: Alignment.topCenter,
                 end: Alignment.bottomCenter,
                 colors: [
-          Color(0xff13005A),
-                  Color(0xff13005A),
-                  Color(0xff13005A),
+          Color(0xff16162D),
+                  Color(0xff16162D),
+                  Color(0xff16162D),
 
-          Colors.grey.shade900
+          Color(0xff484862)
         ])),
         child: Center(
           child: Column(

@@ -1,16 +1,16 @@
-import 'package:app2/views/Widgets/loginSection.dart';
-import 'package:app2/views/Widgets/navBar.dart';
+import 'package:app2/PrincipalApp/widgets/loginSec2.dart';
+import 'package:app2/PrincipalApp/widgets/navBarPr.dart';
+import 'package:app2/PrincipalApp/widgets/welcomePri.dart';
 import 'package:flutter/material.dart';
 
-import 'Widgets/keyboardWid/keyBoard.dart';
-
-class LoginScreen extends StatelessWidget {
-  const LoginScreen({Key? key}) : super(key: key);
+class Login2 extends StatelessWidget {
+  const Login2({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     final _size = MediaQuery.of(context).size;
     return Scaffold(
+      resizeToAvoidBottomInset: true,
       body: Container(
         width: _size.width,
         height: _size.height,
@@ -24,7 +24,7 @@ class LoginScreen extends StatelessWidget {
                   Color(0xff16162D),
 
                   Color(0xff484862)
-            ])),
+                ])),
         child: Stack(
           children: [
             Positioned(
@@ -35,18 +35,15 @@ class LoginScreen extends StatelessWidget {
                   width: 70,
                   height: 40,
                 )),
-            Positioned(right: 20, top: 16, child: NavBar()),
+            Positioned(right: 20, top: 16, child: NavBarPri()),
+          Positioned(top:130,
+            left: 90,
+            child: WelcomePri()),
             Positioned(
-              top: 120,
-              right: 80,
+                top: 130,
+                right: 90,
+                child: LoginSec2()),
 
-              child:LoginSection(),
-
-            ),
-            Positioned(
-              top: 150,
-                left: 120,
-                child: KeyBordSection())
           ],
         ),
       ),
